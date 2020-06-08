@@ -12,7 +12,9 @@
       "name": "TvM",
       "phone": "02130211",
       "address": "Gia Phu",
-      "id": "anU2q-cRO"
+      "id": "anU2q-cRO",
+      "email": "tvm@gmail.com",
+      "password": "202cb962ac59075b964b07152d234b70"
     }
   ]
 }
