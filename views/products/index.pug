@@ -1,0 +1,34 @@
+extends ../layouts/common
+
+block content
+    h1 Products
+
+    .d-flex.align-items-center
+
+    form(action="/products/search", method="GET", class="d-flex")
+        input(type="text" name="q", class="form-control")
+        button(class="btn btn-primary ml-2") Search
+
+    table.table
+        each product in products
+            tr
+                td= product.name
+                td
+                    img(src=product.image)
+                td= product.description
+                td= product.price
+
+    nav(aria-label='Page navigation')
+        ul.pagination.justify-content-end
+            li.page-item.disabled
+                a.page-link(href='#', tabindex='-1', aria-disabled='true') Previous
+            li.page-item
+                a.page-link(href='/product?page=1') 1
+            li.page-item
+                a.page-link(href='/product?page=2') 2
+            li.page-item
+                a.page-link(href='/product?page=3') 3
+            li.page-item
+                a.page-link(href='#') Next
+
+    
